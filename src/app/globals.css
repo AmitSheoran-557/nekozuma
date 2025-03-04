@@ -84,6 +84,8 @@ body {
 
 .hero-tiger-img {
   max-width: 600px;
+  right: -30px;
+  min-height: 560px;
 }
 
 .hero-col-padding {
@@ -271,6 +273,7 @@ body {
 
   .hero-tiger-img {
     max-width: 500px;
+    min-height: unset;
   }
 
   .hero-heading {

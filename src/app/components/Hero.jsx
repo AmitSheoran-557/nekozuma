@@ -13,9 +13,10 @@ const Hero = () => {
                     <p className='text-gray hero-subheading text-lg-start text-center font-sarabun'>The collection  of 5555 NFTs on the Solana blockchain. The collection serves to be a rising force against the anime meta of collections with undoxxed teams and is therefore backed by the team at Nubbies NFT & Karmic Labs.</p>
                     <button className='px-4 text-white border-0 wallet-button mx-lg-0 mx-auto d-lg-block d-flex bg-blue font-sarabun'>Connect Wallet</button>
                 </div>
-                <Image className='d-block d-lg-none hero-tiger-img pointer-events-none' src='/assets/images/webp/hero-img.webp' />
+                <Image className='d-block d-lg-none hero-tiger-img pointer-events-none z-2' src='/assets/images/webp/hero-sm-tiger-img.webp' />
+                <Image className='d-block d-lg-none hero-tiger-img bottom-0 position-absolute  pointer-events-none' src='/assets/images/webp/hero-blue-box.webp' />
             </div>
-            <Image className='d-none d-lg-block hero-tiger-img pointer-events-none end-0 bottom-0 position-absolute' src='/assets/images/webp/hero-img.webp' />
+            <Image className='d-none d-lg-block hero-tiger-img pointer-events-none bottom-0 position-absolute' src='/assets/images/webp/hero-img.webp' />
         </div>
     )
 }
