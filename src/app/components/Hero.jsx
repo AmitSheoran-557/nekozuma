@@ -5,7 +5,7 @@ import { Image } from 'react-bootstrap'
 const Hero = () => {
     return (
         <div className='bg-blue d-flex flex-column w-100 overflow-hidden position-relative justify-content-start align-items-enter mx-auto' style={{ maxWidth: "1920px" }}>
-            <Image className='position-absolute start-0 hero-light-img' src='/assets/images/png/hero-light-img.png' />
+            <Image className='position-absolute start-0 hero-light-img pointer-events-none' src='/assets/images/webp/hero-light-img.webp' />
             <Header />
             <div className="hero-content d-lg-block d-flex flex-column justify-content-center align-items-center">
                 <div className="px-lg-0 px-3 hero-col-padding">
@@ -13,9 +13,9 @@ const Hero = () => {
                     <p className='text-gray hero-subheading text-lg-start text-center font-sarabun'>The collection  of 5555 NFTs on the Solana blockchain. The collection serves to be a rising force against the anime meta of collections with undoxxed teams and is therefore backed by the team at Nubbies NFT & Karmic Labs.</p>
                     <button className='px-4 text-white border-0 wallet-button py-2 mx-lg-0 mx-auto d-lg-block d-flex bg-blue font-sarabun'>Connect Wallet</button>
                 </div>
-                <Image className='d-block d-lg-none hero-tiger-img' src='/assets/images/png/hero-img.png' />
+                <Image className='d-block d-lg-none hero-tiger-img pointer-events-none' src='/assets/images/webp/hero-img.webp' />
             </div>
-            <Image className='d-none d-lg-block hero-tiger-img end-0 bottom-0 position-absolute' src='/assets/images/png/hero-img.png' />
+            <Image className='d-none d-lg-block hero-tiger-img pointer-events-none end-0 bottom-0 position-absolute' src='/assets/images/webp/hero-img.webp' />
         </div>
     )
 }

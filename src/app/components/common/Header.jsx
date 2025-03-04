@@ -6,7 +6,6 @@ import Link from "next/link";
 
 const Header = () => {
     const [open, setOpen] = useState(false);
-
     useEffect(() => {
         if (open && window.innerWidth < 1024) {
             document.body.style.overflow = "hidden";
@@ -18,11 +17,9 @@ const Header = () => {
         };
     }, [open]);
 
-  
-
     return (
         <div className="mx-auto w-100 d-flex justify-content-center py-lg-4 py-3">
-            <Image className="position-absolute start-0 top-0 hero-blue-img" src="/assets/images/png/header-blue-img.png" alt="blue-img" />
+            <Image className="position-absolute start-0 top-0 hero-blue-img" src="/assets/images/webp/header-blue-img.webp" alt="blue-img" />
             <div className="w-100 header-padding mx-auto">
                 <div className="d-flex justify-content-between align-items-center mx-auto w-100 rounded-3 overflow-hidden">
                     <Link className="text-decoration-none" href="/">
@@ -39,8 +36,8 @@ const Header = () => {
                             </div>
                             <div className="d-flex nav-list-2">
                                 {SOCIAL_DATA_LIST.map((item, index) => (
-                                    <Link onClick={() => setOpen(!open)}  target="_blank" href={item.path} className="text-white text-decoration-none social-icon" key={index}>
-                                        <Image src={item.image} alt={item.alt} width={24} height={24} />
+                                    <Link onClick={() => setOpen(!open)} target="_blank" href={item.path} className="text-white text-decoration-none social-icon" key={index}>
+                                        <Image className="pointer-events-none" src={item.image} alt={item.alt} width={24} height={24} />
                                     </Link>
                                 ))}
                             </div>
@@ -63,7 +60,7 @@ const Header = () => {
                             <div className="d-flex nav-list-2">
                                 {SOCIAL_DATA_LIST.map((item, index) => (
                                     <Link href={item.path} target="_blank" className="text-white text-decoration-none social-icon" key={index}>
-                                        <Image src={item.image} alt={item.alt} width={24} height={24} />
+                                        <Image className="pointer-events-none" src={item.image} alt={item.alt} width={24} height={24} />
                                     </Link>
                                 ))}
                             </div>
