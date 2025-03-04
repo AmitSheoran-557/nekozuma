@@ -1,42 +1,485 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: franklin;
+  src: url(/assets/fonts/FranklinGothic-Heavy.otf);
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+body {
+  background-color: #1C2430 !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.font-franklin {
+  font-family: "franklin", sans-serif;
+}
+
+.font-sarabun {
+  font-family: "Sarabun", sans-serif;
+}
+
+.container {
+  max-width: 888px !important;
+}
+
+:root {
+  --font-size-large: 64px;
+  --font-size-medium: 43px;
+  --font-size-small: 21px;
+}
+
+.font-custom-large {
+  font-size: var(--font-size-large);
+}
+
+.font-custom-medium {
+  font-size: var(--font-size-medium);
+}
+
+.font-custom-small {
+  font-size: var(--font-size-small);
+}
+
+/* ================================== hero section class ====================================== */
+.bg-blue {
+  background-color: #1C2430;
+}
+
+.header-name {
+  font-size: 21px;
+}
+
+.hero-heading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 2px;
+  width: 164px;
+  height: 1px;
+  background-color: #3586ff;
+}
+
+.hero-heading {
+  max-width: max-content;
+}
+
+.header-link:hover {
+  color: #3586FF !important;
+  transition: all 300ms linear;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  transition: all 300ms linear;
+}
+
+.hero-tiger-img {
+  max-width: 600px;
+}
+
+.hero-col-padding {
+  padding-top: 164px;
+  padding-bottom: 140px;
+}
+
+.wallet-button {
+  background-color: #245AAB;
+  border-radius: 9px;
+}
+
+.wallet-button:hover {
+  background-color: white;
+  color: #245AAB !important;
+  transition: all 300ms linear;
+}
+
+.text-blue {
+  color: #3586FF;
+}
+
+.text-gray {
+  color: #D4E5FF;
+}
+
+.hero-subheading {
+  max-width: 502px;
+  margin-bottom: 43px;
+}
+
+.hero-content {
+  padding-left: 200px;
+}
+
+.header-padding {
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.hero-light-img {
+  bottom: -12px;
+  max-width: 212px;
+}
+
+.nav-list {
+  gap: 32px;
+}
+
+.nav-list-2 {
+  gap: 18px;
+}
+
+.toggle-button {
+  width: 32px;
+  height: 2px;
+  background-color: white;
+  transition: all 300ms linear;
+}
+
+.open {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.open-two {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+/* ================================= cards section class ============================================= */
+.card-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.slide-scroll {
+  animation: scroll 15s linear infinite;
+}
+
+.slide-scroll:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(40%);
+  }
+}
+
+.slide-scroll-left {
+  animation: slide-left 15s linear infinite;
+  flex-shrink: 0;
+}
+
+.slide-scroll-left:hover {
+  animation-play-state: paused;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ================================= story section class ============================================= */
+.story-subheading {
+  max-width: 888px;
+  margin-bottom: 36px;
+}
+
+.story-subheading-text {
+  font-size: 14px;
+}
+
+.border-line {
+  max-width: 164px;
+  width: 100%;
+  height: 1px;
+  background-color: #3586FF;
+  margin-top: 61px;
+  margin-bottom: 56px;
+}
+
+/* ================================= team section class ============================================= */
+.team-section {
+  margin-top: -1px;
+  padding-bottom: 64px;
+}
+
+.team-heading {
+  margin-bottom: 36px;
+}
+
+.team-member-img {
+  max-width: 202px;
+  max-height: 202px;
+  margin-bottom: 23px;
+}
+
+.team-card-heading {
+  margin-bottom: 9px;
+}
+
+.team-member-name {
+  font-size: 14px;
+}
+
+.team-card-description {
+  font-size: 14px;
+}
+
+.team-card-row {
+  row-gap: 36px;
+  column-gap: 18px;
+}
+
+/* ========================= footer section class ========================================= */
+.bg-blue-2 {
+  background-color: #245AAB;
+}
+
+.footer-heading {
+  font-size: 21px;
+}
+
+/* ================================ responsive media queries ==================================== */
+
+@media (max-width: 1278.99px) {
+  .card-img {
+    max-width: 200px;
+  }
+
+  .hero-tiger-img {
+    max-width: 500px;
+  }
+
+  .hero-heading {
+    font-size: 48px;
+  }
+
+  .hero-col-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .hero-content {
+    padding-left: 74px;
+  }
+
+  .header-padding {
+    padding-left: 74px;
+    padding-right: 74px;
+  }
+
+  .hero-subheading {
+    min-width: unset;
+    margin-bottom: 36px;
+  }
+
+  .hero-light-img {
+    max-width: 190px;
+  }
+
+  .story-subheading {
+    margin-bottom: 24px;
+  }
+
+  .border-line {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .team-member-img {
+    margin-bottom: 20px;
+  }
+
+  .footer-light-img-1 {
+    max-width: 350px;
+  }
+
+  .footer-light-img-2 {
+    max-width: 450px;
+  }
+
+  .heading-font {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 991.9px) {
+  .card-img {
+    max-width: 200px;
+  }
+
+  .header-padding {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .hero-content {
+    padding-left: 0px;
+  }
+
+  .hero-tiger-img {
+    max-width: 400px;
+  }
+
+  .hero-col-padding {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  .hero-heading {
+    font-size: 36px;
+  }
+
+  .hero-subheading {
+    margin-bottom: 24px;
+    max-width: 659px;
+  }
+
+  .hero-light-img {
+    max-width: 150px;
+  }
+
+  .story-subheading {
+    max-width: 688px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .border-line {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .team-section {
+    margin-top: -1px;
+    padding-bottom: 48px;
+  }
+
+  .team-heading {
+    margin-bottom: 28px;
+  }
+
+  .team-card-row {
+    row-gap: 20px;
+    column-gap: 14px;
+  }
+
+  .team-member-img {
+    margin-bottom: 14px;
+  }
+
+  .footer-light-img-1 {
+    max-width: 300px;
+  }
+
+  .footer-light-img-2 {
+    max-width: 400px;
+  }
+
+  .heading-font {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 766.99px) {
+  .card-img {
+    max-width: 200px;
+  }
+
+  .hero-subheading {
+    margin-bottom: 20px;
+  }
+
+  .header-padding {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .hero-light-img {
+    max-width: 120px;
+  }
+
+  .hero-col-padding {
+    padding-top: 70px;
+    padding-bottom: 20px;
+  }
+
+  .hero-blue-img {
+    max-height: 70px;
+  }
+
+  .team-heading {
+    margin-bottom: 20px;
+  }
+
+  .team-card-row {
+    row-gap: 16px;
+  }
+
+  .team-member-img {
+    margin-bottom: 10px;
+    max-width: 180px;
+    max-height: 180px;
+  }
+
+  .team-card {
+    max-width: 168px !important;
+  }
+
+  .footer-light-img-1 {
+    max-width: 240px;
+  }
+
+  .footer-light-img-2 {
+    max-width: 320px;
+  }
+
+  .hero-tiger-img {
+    max-width: 375px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-img {
+    max-width: 150px;
+  }
+
+  .footer-light-img-1 {
+    max-width: 180px;
+  }
+
+  .header-padding {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .footer-light-img-2 {
+    max-width: 230px;
+  }
+
+  .hero-blue-img {
+    max-height: 60px;
+  }
+
+  .hero-light-img {
+    max-width: 100px;
+  }
+
+  .hero-col-padding {
+    padding-top: 40px;
   }
 }
