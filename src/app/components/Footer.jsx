@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="d-flex gap-4">
                 {SOCIAL_DATA_LIST.map((item, index) => (
                     <Link href={item.path} className='text-decoration-none' key={index} target='_blank'>
-                        <Image className='social-icon pointer-events-none' src={item.image} alt={item.alt} width={32} height={32} />
+                        <Image className='social-icon' src={item.image} alt={item.alt} width={32} height={32} />
                     </Link>
                 ))}
             </div>

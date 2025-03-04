@@ -14,9 +14,11 @@
 body {
   background-color: #1C2430 !important;
 }
-.pointer-events-none{
+
+.pointer-events-none {
   pointer-events: none;
 }
+
 .font-franklin {
   font-family: "franklin", sans-serif;
 }
@@ -76,7 +78,7 @@ body {
 }
 
 .social-icon:hover {
-  transform: scale(1.2);
+  transform: scale(1.2) !important;
   transition: all 300ms linear;
 }
 
@@ -92,6 +94,8 @@ body {
 .wallet-button {
   background-color: #245AAB;
   border-radius: 9px;
+  padding-top: 6.5px;
+  padding-bottom: 6.5px;
 }
 
 .wallet-button:hover {
@@ -153,7 +157,7 @@ body {
 /* ================================= cards section class ============================================= */
 .card-img {
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
   height: auto;
 }
 
@@ -211,6 +215,9 @@ body {
   background-color: #3586FF;
   margin-top: 61px;
   margin-bottom: 56px;
+}
+.story-img{
+  padding-top: 22px;
 }
 
 /* ================================= team section class ============================================= */
@@ -395,6 +402,9 @@ body {
   .heading-font {
     font-size: 30px;
   }
+  .story-img{
+    padding-top: 8px;
+  }
 }
 
 @media (max-width: 766.99px) {
@@ -455,11 +465,13 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 478.99px) {
   .card-img {
     max-width: 150px;
   }
-
+  .story-subheading {
+    margin-bottom: 16px;
+  }
   .footer-light-img-1 {
     max-width: 180px;
   }

@@ -37,7 +37,7 @@ const Header = () => {
                             <div className="d-flex nav-list-2">
                                 {SOCIAL_DATA_LIST.map((item, index) => (
                                     <Link onClick={() => setOpen(!open)} target="_blank" href={item.path} className="text-white text-decoration-none social-icon" key={index}>
-                                        <Image className="pointer-events-none" src={item.image} alt={item.alt} width={24} height={24} />
+                                        <Image src={item.image} alt={item.alt} width={24} height={24} />
                                     </Link>
                                 ))}
                             </div>
@@ -60,7 +60,7 @@ const Header = () => {
                             <div className="d-flex nav-list-2">
                                 {SOCIAL_DATA_LIST.map((item, index) => (
                                     <Link href={item.path} target="_blank" className="text-white text-decoration-none social-icon" key={index}>
-                                        <Image className="pointer-events-none" src={item.image} alt={item.alt} width={24} height={24} />
+                                        <Image src={item.image} alt={item.alt} width={24} height={24} />
                                     </Link>
                                 ))}
                             </div>

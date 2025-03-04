@@ -16,7 +16,7 @@ const Team = () => {
                             <h4 className="team-member-name text-gray font-sarabun">{member.name}</h4>
                             <p className="my-lg-2 mt-2 mb-1 team-card-description font-sarabun text-gray">{member.description}</p>
                             <Link href={member.twitterLink} target='_blank'>
-                                <Image className='mx-auto pointer-events-none' src={member.twitterIcon} width={20} height={20} />
+                                <Image className='mx-auto social-icon' src={member.twitterIcon} width={20} height={20} />
                             </Link>
                         </div>
                     ))}
